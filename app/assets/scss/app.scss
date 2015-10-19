@@ -1,0 +1,147 @@
+// @import "reset";
+@import "bootstrap";
+@import "font-awesome";
+@import "variables";
+
+$mainColor: #2C3E50;
+
+html {
+  background-color: $mainColor;
+  -webkit-font-smoothing: antialiased;
+  * {
+    font-family:"Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  button, .btn:focus, .btn, .btn.active {
+    outline: 0 !important;
+  }
+}
+body {
+  background: none;
+}
+p {
+  color: #FFF;
+}
+
+header {
+  background-color: #EEEEEE;
+  nav{
+    
+    ul {
+      margin-bottom: 0px;
+      padding-left: 0px;
+      li{
+        color: $mainColor;
+        padding: 10px;
+        display: inline-block;
+        &.login-tab {
+          float: right;
+        }
+        &.user-tab {
+          float: right;
+          button {
+            padding: 1px 6px 0px;
+            font-size: 12px;
+          }
+        }
+        a {
+          color: $mainColor;
+          &:hover {
+            color: $mainColor;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  padding: 10px;
+  background-color: #EEEEEE;
+  .app-version{
+    display: inline-block;
+  }
+  .footer-links {
+     float: right;
+    ul {
+      margin-bottom: 0px;
+      li {
+        display: inline-block;
+       padding: 0 5px;
+      }
+    }
+  }
+}
+
+.main-container {
+  padding-top: 20px;
+  padding-right: 20px;
+  min-height: 500px;
+}
+
+.login-signup-page {
+  .button-container {
+    text-align: center;
+    .btn {
+      background-color: #FFFFFF;
+      border-radius: 10px;
+      min-width: 80px;
+      margin: 5px 5px;
+      &.inactive{
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .forms-container {
+    margin-top: 30px;
+    position: relative;
+    padding-top: 400px;
+    .form-container {
+      position: absolute;
+      top: 0px;
+      -webkit-transition: all ease 0.3s;
+      transition: all ease 0.3s;
+      form {
+        background-color: #FFFFFF;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.3);
+      }
+      &.login-container {
+        left: 0px;
+        opacity: 1;
+        &.ng-hide:not(.ng-hide-animate) {
+          left: -400px;
+          opacity: 0;
+          display: block!important;
+        }
+      }
+      &.signup-container {
+        left: 0px;
+        opacity: 1;
+        &.ng-hide:not(.ng-hide-animate) {
+          left: 400px;
+          opacity: 0;
+          display: block!important;
+        }
+      }
+    }
+    .login-icon {
+      text-align: center;
+      color: #FFFFFF;
+      font-size: 100px;
+      margin-top: 20px;
+    }
+  }
+  .text {
+    color: #fff;
+    margin-bottom: 70px;
+    p {
+     font-size: 18px;
+     text-align: justify;
+    }
+  }
+}
+
