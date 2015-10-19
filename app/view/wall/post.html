@@ -1,0 +1,33 @@
+<div>
+
+  <div  class="left-bloc">
+    <div class="top-left-bloc">
+      <div class="user-pic" style="background-image=url('{{ elm.firstname }}')"></div>
+      <div class="user-pic">{{elm.firstname}}</div>
+    </div>
+    <div class="time">{{ elm.date | date:'medium' }}</div>
+    <div class="post-title">
+      <p>{{elm.title}}</p>
+    </div>
+    <div class="post-description">
+      <p>{{elm.description}}</p>
+    </div>
+  </div>
+
+  <div class="right-bloc">
+    <div class="left">
+      <div class="vote-one">{{ elm.voteOne }}</div>
+      <div class="title-one">{{ elm.titleOne }}</div>
+      <div class="img-one" style="background-image=url('{{ elm.fileOne }}')">
+      </div>
+    </div>
+    <div class="right">
+      <div class="vote-two">{{ elm.voteTwo }}</div>
+      <div class="title-two">{{ elm.titleTwo }}</div>
+      <div class="img-two" style="background-image=url('{{ elm.fileTwo }}')">
+      </div>
+    </div>
+
+  </div>
+
+</div>

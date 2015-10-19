@@ -1,5 +1,10 @@
-<p>This is the partial for view 1.</p>
-<p ng-repeat="elm in data">{{elm}}</p>
+<p>This is the partial for Wall.</p>
+<!-- <p ng-repeat="elm in data">{{elm}}</p> -->
+<div ng-repeat="elm in data">
+  <post-element></post-element>
+</div>
+
+
 
 <!-- Modal -->
 <div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

@@ -10,7 +10,8 @@ angular.module('myApp.addPost', [
       var fileOneInput = $('#post-first-file').val();
       var fileTwoInput = $('#post-second-file').val();
 
-      var ref = new Firebase("https://renan-app.firebaseio.com/post/");
+      var ref = new Firebase("https://renan-app.firebaseio.com/posts/");
+      var myDate = +new Date() //Give back millisecond
       
       var post = {
         'title': $scope.postTitle,
@@ -23,7 +24,8 @@ angular.module('myApp.addPost', [
         'totalVote': 0,
         'voteOne': 0,
         'voteTwo':0,
-        'date': new Date(),
+        'date': myDate,
+        'firstname': $scope.authData.firstname
       }
       // console.log(post);
         

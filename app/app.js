@@ -10,7 +10,8 @@ angular.module('myApp', [
   'myApp.view2',
   'myApp.version',
   'myApp.login-logout',
-  'myApp.addPost'
+  'myApp.addPost',
+  'myApp.wallDirective'
 ])
 
 // .config(['$routeProvider', function($routeProvider) {
