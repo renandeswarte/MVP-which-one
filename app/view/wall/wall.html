@@ -1,0 +1,72 @@
+<p>This is the partial for view 1.</p>
+<p ng-repeat="elm in data">{{elm}}</p>
+
+<!-- Modal -->
+<div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add a new Post</h4>
+      </div>
+      <div class="modal-body">
+
+        
+          <form class="signup-form" ng-controller="addPostController" ng-submit="(createPost())">
+            <div class="form-group">
+              <label>Title</label>
+              <input type="text" class="form-control" id="post-title" placeholder="Post Title" ng-model="postTitle" required>
+            </div>
+            <div class="form-group">
+              <label>Description</label>
+              <textarea class="form-control" id="post-description" placeholder="Post Description" ng-model="postDescription" required rows="3"></textarea>
+            </div>
+
+            <div class="form-file-bloc row">
+              <div class="form-group col-xs-6">
+                <label>First Element</label>
+                <input type="text" class="form-control" id="post-first-title" placeholder="First Element Title" ng-model="firstTitle" required>
+              </div>
+              <div class="form-group col-xs-6">
+                <label>Second Element</label>
+                <input type="text" class="form-control" id="post-second-title" placeholder="Second Element Title" ng-model="secondTitle" required>
+              </div>
+              
+              <div class="form-group col-xs-6">
+                <label>First File</label>
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <span class="btn btn-primary btn-file">
+                            Browse&hellip; <input type="file" >
+                        </span>
+                    </span>
+                    <input id="post-first-file" type="text" class="form-control" ng-model="fileOne" >
+                </div>
+              </div>
+
+              <div class="form-group col-xs-6">
+                <label>Second File</label>
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <span class="btn btn-primary btn-file">
+                            Browse&hellip; <input type="file" >
+                        </span>
+                    </span>
+                    <input id="post-second-file"  type="text" class="form-control" ng-model="fileTwo">
+                </div>
+              </div>
+              <!-- Show error messages -->
+              <p class="error" ng-if="error">Error: <strong>{{ error.message }}</strong></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Submit Post</button>
+            </div>
+          </form>
+       
+
+      </div>
+      
+    </div>
+  </div>
+</div>

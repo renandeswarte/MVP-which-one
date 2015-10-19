@@ -1,6 +1,5 @@
 'use strict';
 
-// Declare app level module which depends on views, and components
 angular.module('myApp.authentification', [
   'firebase'
 ])
@@ -71,7 +70,7 @@ angular.module('myApp.authentification', [
         }).then(function(authData) {
           // console.log("Logged in as:", authData.uid);
           // Redirect to main page after login
-          $location.path("/view1");
+          $location.path("/wall");
         }).catch(function(error) {
           console.error("Authentication failed:", error);
           $scope.error = error;
@@ -111,7 +110,7 @@ angular.module('myApp.authentification', [
       }).then(function(authData) {
         // console.log("Logged in as:", authData.uid);
         // Redirect to main page after login
-        $location.path("/view1");
+        $location.path("/wall");
       }).catch(function(error) {
         console.error("Authentication failed:", error);
         $scope.error = error;

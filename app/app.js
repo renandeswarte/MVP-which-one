@@ -6,10 +6,11 @@ angular.module('myApp', [
   'firebase',
   'myApp.authentification',
   'myApp.homepage',
-  'myApp.view1',
+  'myApp.wall',
   'myApp.view2',
   'myApp.version',
-  'myApp.login-logout'
+  'myApp.login-logout',
+  'myApp.addPost'
 ])
 
 // .config(['$routeProvider', function($routeProvider) {
@@ -31,6 +32,7 @@ angular.module('myApp', [
       return (!!input) ? input.charAt(0).toUpperCase() + input.substr(1).toLowerCase() : '';
     }
 })
+
 
 ;
 

@@ -18,7 +18,7 @@
           <label>Password</label>
           <input type="password" class="form-control" id="login-password" placeholder="Password" ng-model="password">
         </div>
-        <p ng-if="error">Error: <strong>{{ error.message }}</strong></p>
+        <p class="error" ng-if="error">Error: <strong>{{ error.message }}</strong></p>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <div class='login-icon'><i class="fa fa-rocket"></i></div>
@@ -46,7 +46,7 @@
           <input type="password" class="form-control" id="signup-password" placeholder="Password" ng-model="password">
         </div>
         <!-- <p ng-if="message">Message: <strong>{{ message }}</strong></p> -->
-        <p ng-if="error">Error: <strong>{{ error.message }}</strong></p>
+        <p class="error" ng-if="error">Error: <strong>{{ error.message }}</strong></p>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
     </div>

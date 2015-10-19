@@ -10,7 +10,6 @@ angular.module('myApp.homepage', ['ngRoute'])
 }])
 
 .controller('homepage', ['$scope', '$firebaseObject', function($scope, $firebaseObject) {
-
   var ref = new Firebase("https://renan-app.firebaseio.com/results");
   // download the data into a local object
   var syncObject = $firebaseObject(ref);
@@ -19,5 +18,4 @@ angular.module('myApp.homepage', ['ngRoute'])
   // data is the model to define in the view and that will contain the data
   syncObject.$bindTo($scope, "data");
   console.log(syncObject);
-
 }]);

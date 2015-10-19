@@ -15,6 +15,8 @@
 
   <script src="assets/js/modernizr-2.8.3.min.js"></script>
   <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/app.extra.js"></script>
 </head>
 <body class="container-full">
 
@@ -23,12 +25,13 @@
       <ul class="menu">
       <li><a href="#/"><i class="fa fa-compass"></i></a></li>
         <li><a href="#/">Home</a></li>
-        <li ng-show="authData"><a href="#/view1">View1</a></li>
+        <li ng-show="authData"><a href="#/wall">Wall</a></li>
         <li ng-show="authData"><a href="#/view2">View2</a></li>
         <li class="login-tab" ng-hide="authData"><a href="#/login">Login | Signup</a></li>
         <li class="user-tab" ng-show="authData">
           Hello {{ authData.firstname | capitalize }} | <a href="#/" ng-click="logout()"><button class="btn btn-warning">Logout</button></a>
         </li>
+        <li class="add-post" ng-show="authData"><button class="btn btn-success" data-toggle="modal" data-target="#postModal">Add post</button></li>
       </ul>
     </nav>
   </header>

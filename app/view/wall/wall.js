@@ -1,11 +1,11 @@
 'use strict';
 
-angular.module('myApp.view1', ['ngRoute'])
+angular.module('myApp.wall', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {
-    templateUrl: 'view/view1/view1.html',
-    controller: 'View1Ctrl',
+  $routeProvider.when('/wall', {
+    templateUrl: 'view/wall/wall.html',
+    controller: 'wallCtrl',
     resolve: {
       // controller will not be loaded until $waitForAuth resolves
       // Auth refers to our $firebaseAuth wrapper in the example above
@@ -18,9 +18,10 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', ['$scope', '$firebaseObject', function($scope, $firebaseObject) {
 
-  var ref = new Firebase("https://renan-app.firebaseio.com/results");
+.controller('wallCtrl', ['$scope', '$firebaseObject', function($scope, $firebaseObject) {
+
+  var ref = new Firebase("https://renan-app.firebaseio.com/post");
   // download the data into a local object
   var syncObject = $firebaseObject(ref);
   // synchronize the object with a three-way data binding
