@@ -1,4 +1,4 @@
-<div class="post-container row">
+<div class="post-container row"  ng-class="hasVoted(elmIndex, authData) ? 'disable' : 'enable'">
   <div  class="left-bloc  col-xs-5">
     <div class="top-left-bloc">
       <div class="user-pic" style="background-image=url('{{ elm.firstname }}')"></div>
@@ -17,13 +17,13 @@
     <div class="left col-xs-6">
       <div class="vote vote-one">{{ elm.voteOne }}</div>
       <div class="title title-one">{{ elm.firstTitle }}</div>
-      <div class="img img-one" style="background-image=url('{{ elm.fileOne }}')" ng-click="vote(elm, elmIndex,  'one', authData.uid); updateVote(elmIndex, authData.uid)">
+      <div class="img img-one" style="background-image=url('{{ elm.fileOne }}')" ng-disabled="hasVoted(elmIndex, authData)" ng-click="hasVoted(elmIndex, authData) || vote(elm, 'one'); hasVoted(elmIndex, authData) || updateVote(elmIndex, authData.uid)">
       </div>
     </div>
     <div class="right col-xs-6">
       <div class="vote vote-two">{{ elm.voteTwo }}</div>
       <div class="title title-two">{{ elm.secondTitle }}</div>
-      <div class="img img-two" style="background-image=url('{{ elm.fileTwo }}')" ng-click="vote(elm, elmIndex,  'two', authData.uid); updateVote(elmIndex, authData.uid)">
+      <div class="img img-two" style="background-image=url('{{ elm.fileTwo }}')" ng-click=" hasVoted(elmIndex, authData) || vote(elm, 'two'); hasVoted(elmIndex, authData) || updateVote(elmIndex, authData.uid)">
       </div>
     </div>
 
