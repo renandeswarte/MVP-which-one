@@ -1,0 +1,67 @@
+.post-container {
+  color: $mainColor;
+  background-color: $secondaryColor;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  .left-bloc {
+    .top-left-bloc {
+      color: $mainColor;
+      position: relative;
+      .user-pic {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 3px solid $mainColor;
+        background-image: url('../images/default-user.jpeg');
+        background-size: cover;
+        display: inline-block;
+      }
+      .user-name {
+        top: -10px;
+        padding-left: 10px;
+        display: inline-block;
+        font-size: 25px;
+        text-transform: capitalize;
+        position: relative;
+        top: -10px;
+      }
+    }
+    .time {
+      color: #CCCCCC;
+      i {
+        margin-right: 10px;
+      }
+      font-size: 12px;
+    }
+    .post-title {
+      margin: 5px 0px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .post-description {
+      font-size: 14px;
+      text-align: justify;
+      text-transform: capitalize;
+    }
+  }
+
+  .right-bloc {
+    color: $mainColor;
+
+    .left, .right {
+      .vote{}
+      .title {
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .img {
+        margin: 10px 0px;
+        border-radius: 5px;
+        width: 100%;
+        padding-bottom: 100%;
+        background-color: #2682D5;
+      }
+    }
+  }
+}

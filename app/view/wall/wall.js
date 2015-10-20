@@ -19,10 +19,29 @@ angular.module('myApp.wall', ['ngRoute'])
 }])
 
 
-.controller('wallCtrl', ['$scope', '$firebaseObject', function($scope, $firebaseObject) {
+.controller('wallCtrl', ['$scope', '$firebaseObject', '$firebaseArray', function($scope, $firebaseObject, $firebaseArray) {
 
   var ref = new Firebase("https://renan-app.firebaseio.com/posts");
   var syncObject = $firebaseObject(ref);
   syncObject.$bindTo($scope, "data");
+
+  $scope.vote = function(elm, postId, side, user) {
+
+    // Update who voted fot this post
+    var postVotersRef = new Firebase("https://renan-app.firebaseio.com/posts/" + postId + "/voters");
+    var postVotersArray = $firebaseArray(postVotersRef);
+    postVotersArray.set(user).then(function() {
+            console.log('voter saved!');
+          }).catch(function(error) {
+            console.log('Error!');
+    });
+
+    elm.totalVote++;
+    if (side === "one") {
+      elm.voteOne++;
+    } else {
+      elm.voteTwo++;
+    }
+  }
 
 }]);

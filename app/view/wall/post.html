@@ -1,11 +1,10 @@
-<div>
-
-  <div  class="left-bloc">
+<div class="post-container row">
+  <div  class="left-bloc  col-xs-5">
     <div class="top-left-bloc">
       <div class="user-pic" style="background-image=url('{{ elm.firstname }}')"></div>
-      <div class="user-pic">{{elm.firstname}}</div>
+      <div class="user-name">{{elm.firstname}}</div>
     </div>
-    <div class="time">{{ elm.date | date:'medium' }}</div>
+    <div class="time"><i class="fa fa-clock-o"></i>{{ elm.date | date:'MMM d h:mm a' }}</div>
     <div class="post-title">
       <p>{{elm.title}}</p>
     </div>
@@ -14,17 +13,17 @@
     </div>
   </div>
 
-  <div class="right-bloc">
-    <div class="left">
-      <div class="vote-one">{{ elm.voteOne }}</div>
-      <div class="title-one">{{ elm.titleOne }}</div>
-      <div class="img-one" style="background-image=url('{{ elm.fileOne }}')">
+  <div class="right-bloc col-xs-7">
+    <div class="left col-xs-6">
+      <div class="vote vote-one">{{ elm.voteOne }}</div>
+      <div class="title title-one">{{ elm.firstTitle }}</div>
+      <div class="img img-one" style="background-image=url('{{ elm.fileOne }}')" ng-click="vote(elm, elmIndex,  'one', authData.uid)">
       </div>
     </div>
-    <div class="right">
-      <div class="vote-two">{{ elm.voteTwo }}</div>
-      <div class="title-two">{{ elm.titleTwo }}</div>
-      <div class="img-two" style="background-image=url('{{ elm.fileTwo }}')">
+    <div class="right col-xs-6">
+      <div class="vote vote-two">{{ elm.voteTwo }}</div>
+      <div class="title title-two">{{ elm.secondTitle }}</div>
+      <div class="img img-two" style="background-image=url('{{ elm.fileTwo }}')" ng-click="vote(elm, elmIndex,  'two', authData.uid)">
       </div>
     </div>
 

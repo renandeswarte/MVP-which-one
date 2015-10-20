@@ -1,0 +1,39 @@
+header {
+  background-color: $secondaryColor;
+  nav{
+    ul {
+      margin-bottom: 0px;
+      padding-left: 0px;
+      li{
+        color: $mainColor;
+        padding: 10px;
+        display: inline-block;
+        &.login-tab {
+          float: right;
+        }
+        &.add-post {
+          float: right;
+          margin-right: 10px;
+          button {
+            padding: 1px 6px 0px;
+            font-size: 12px;
+          }
+        }
+        &.user-tab {
+          float: right;
+          button {
+            padding: 1px 6px 0px;
+            font-size: 12px;
+          }
+        }
+        a {
+          color: $mainColor;
+          &:hover {
+            color: $mainColor;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
