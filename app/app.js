@@ -37,8 +37,6 @@ angular.module('myApp', [
 .controller("addMessageController", ["$scope", "$firebaseObject",  
   function($scope, $firebaseObject) {
 
-
-
     $scope.showMessages = function() {
       var array = [];
       var getMessages = new Firebase("https://renan-app.firebaseio.com/comments/");

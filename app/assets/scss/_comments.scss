@@ -1,9 +1,20 @@
 .post-message {
-    padding: 10px 0 8px;
-    border-bottom: 1px dotted #CCC;
-    &:first-child {
-      padding-top: 0px;
-    }
+  padding: 10px 0 8px;
+  border-bottom: 1px dotted #CCC;
+  -webkit-animation: show 1s; /* Safari 4+ */
+  animation: show 1s; /* IE 10+, Fx 29+ */
+  @-webkit-keyframes show {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes show {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  &:first-child {
+    padding-top: 0px;
+  }
   .user-bloc {
     .pic {
       display: inline-block;

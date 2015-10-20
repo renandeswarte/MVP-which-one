@@ -5,7 +5,18 @@
   margin-bottom: 40px;
   margin-top: 20px;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 3px;
+  -webkit-animation: show 1s; /* Safari 4+ */
+  animation: show 1s; /* IE 10+, Fx 29+ */
+  @-webkit-keyframes show {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes show {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
   .left-bloc {
     .top-left-bloc {
       color: $mainColor;
@@ -14,7 +25,7 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        border: 3px solid $mainColor;
+        border: 2px solid $mainColor;
         background-image: url('../images/default-user.jpeg');
         background-size: cover;
         display: inline-block;
@@ -37,6 +48,10 @@
           margin-left: 20px;
         }
       }
+      .vote {
+        color: $extraColor;
+        font-weight: bold;
+      }
       font-size: 12px;
     }
     .post-title {
@@ -45,9 +60,9 @@
       font-weight: bold;
     }
     .post-description {
-      font-size: 16px;
+      font-size: 17px;
+      line-height: 24px;
       text-align: justify;
-      text-transform: capitalize;
     }
   }
 
@@ -97,13 +112,13 @@
       .bar {
         border-radius: 5px 0 0 5px;
         float: right;
-        background-color: green;
+        background-color: #27ae60;
       }
     }
     .right {
       .bar {
         border-radius: 0 5px 5px 0;
-        background-color: red;
+        background-color: #e74c3c;
       }
     }
   }
@@ -117,12 +132,12 @@
     &:before {
       position: absolute;
       font-family: 'FontAwesome';
-      content: "\f05d";
+      content: "\f00c";
       top: 5px;
       font-size: 15px;
       line-height: 15px;
       color: #FFF;
-      background-color: grey;
+      background-color: $mainColor;
       opacity: 0.5;
       padding: 5px 5px 5px 7px;
       right: 5px;
@@ -142,12 +157,13 @@
     bottom: -15px;
     font-size: 30px;
     line-height: 30px;
-    color: #FFF;
-    background-color: royalblue;
+    color: $secondaryColor;
+    background-color: $extraColor;
+    border:1px solid $secondaryColor;
     padding: 8px 8px 8px 10px;
     right: -10px;
     border-radius: 50%;
-    border:none;
+    // border:none;
   }
 }
 
