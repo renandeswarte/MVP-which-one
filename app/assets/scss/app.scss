@@ -95,3 +95,45 @@ input[readonly] {
     *zoom: 1;
 }
 
+// Modal 
+.modal.fade.fade2 .modal-dialog2 {
+    -webkit-transform: scale(0.1);
+    -moz-transform: scale(0.1);
+    -ms-transform: scale(0.1);
+    transform: scale(0.1);
+    top: 300px;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.modal.fade.in.fade2 .modal-dialog2 {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    margin-top: 100px;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    // -webkit-transform: translate3d(0, -300px, 0);
+    // transform: translate3d(0, -300px, 0);
+    opacity: 1;
+}
+#commentsModal {
+  .modal-header {
+    .form-group{
+      width: 80%;
+      input {
+        width: 100%;
+      }
+    }
+    button {
+      float: right;
+      width: 18%;
+    }
+  }
+}
+
