@@ -27,7 +27,6 @@ angular.module('myApp.addPost', [
         'date': myDate,
         'firstname': $scope.authData.firstname
       }
-      // console.log(post);
         
       // $save does not create a unique id, instead of push()
       ref.push(post, function(error) { 

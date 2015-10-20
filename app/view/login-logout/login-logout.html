@@ -12,7 +12,7 @@
         <div class="form-group">
           <label>Email address</label>
           <input type="email" class="form-control" id="login-email" placeholder="Email" ng-model="email">
-          <!-- <p ng-if="authData">Logged in user: <strong>{{ authData.uid }}</strong></p> -->
+
         </div>
         <div class="form-group">
           <label>Password</label>
@@ -29,23 +29,22 @@
         <div class="form-group">
           <label>First Name</label>
           <input type="text" class="form-control" id="signup-firstname" placeholder="First name" ng-model="firstname" required>
-          <!-- <p ng-if="authData">Logged in user: <strong>{{ authData.uid }}</strong></p> -->
+     
         </div>
         <div class="form-group">
           <label>Last Name</label>
           <input type="text" class="form-control" id="signup-lastname" placeholder="Last name" ng-model="lastname" required>
-          <!-- <p ng-if="authData">Logged in user: <strong>{{ authData.uid }}</strong></p> -->
+
         </div>
         <div class="form-group">
           <label>Email address</label>
           <input type="email" class="form-control" id="signup-email" placeholder="Email" ng-model="email">
-          <!-- <p ng-if="authData">Logged in user: <strong>{{ authData.uid }}</strong></p> -->
+       
         </div>
         <div class="form-group">
           <label>Password</label>
           <input type="password" class="form-control" id="signup-password" placeholder="Password" ng-model="password">
         </div>
-        <!-- <p ng-if="message">Message: <strong>{{ message }}</strong></p> -->
         <p class="error" ng-if="error">Error: <strong>{{ error.message }}</strong></p>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>

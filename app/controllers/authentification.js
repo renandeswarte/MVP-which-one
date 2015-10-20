@@ -7,7 +7,6 @@ angular.module('myApp.authentification', [
 .factory("Auth", ["$firebaseAuth",
   function($firebaseAuth) {
     var ref = new Firebase("https://renan-app.firebaseio.com");
-    // console.log("Auth ref : ", ref);
     return $firebaseAuth(ref);
   }
 ])
@@ -23,10 +22,6 @@ angular.module('myApp.authentification', [
         var userInfo = $firebaseObject(ref.child('users').child(authData.uid));
 
         $scope.authData = userInfo;
-        // $scope.authData.votes = userInfo.voters;
-        console.log($scope.authData)
-        // console.log("userinfo: ", $scope.authData);
-        // console.dir(authData);
       }
     });
 
@@ -51,7 +46,6 @@ angular.module('myApp.authentification', [
         $scope.message = "User created with uid: " + userData.uid;
 
         var ref = new Firebase("https://renan-app.firebaseio.com/users/" + userData.uid);
-        // var profileRef = ref.child(user);
         var user = $firebaseObject(ref);
         
         user.firstname = $scope.firstname;
@@ -110,7 +104,6 @@ angular.module('myApp.authentification', [
         email: $scope.email,
         password: $scope.password
       }).then(function(authData) {
-        // console.log("Logged in as:", authData.uid);
         // Redirect to main page after login
         $location.path("/wall");
       }).catch(function(error) {
@@ -120,7 +113,6 @@ angular.module('myApp.authentification', [
     };
   }
 ])
-
 
 ;
 

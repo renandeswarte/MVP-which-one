@@ -122,29 +122,27 @@ input[readonly] {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-    // -webkit-transform: translate3d(0, -300px, 0);
-    // transform: translate3d(0, -300px, 0);
-    opacity: 1;
-  }
-  #commentsModal {
-    .modal-header {
-      .form-group{
-        width: 80%;
-        input {
-          width: 100%;
-        }
-      }
-      button {
-        float: right;
-        width: 18%;
-        &.close {
-          text-align: right;
-        }
+  opacity: 1;
+}
+#commentsModal {
+  .modal-header {
+    .form-group{
+      width: 80%;
+      input {
+        width: 100%;
       }
     }
-    .modal-body {
-      max-height: 390px;
-      overflow: scroll;
+    button {
+      float: right;
+      width: 18%;
+      &.close {
+        text-align: right;
+      }
     }
   }
+  .modal-body {
+    max-height: 390px;
+    overflow: scroll;
+  }
+}
 

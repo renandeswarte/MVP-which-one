@@ -72,9 +72,7 @@ angular.module('myApp', [
       });
       $('#message').val('');
     };
-
   }])
-
 
 ;
 
