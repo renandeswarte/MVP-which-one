@@ -15,13 +15,19 @@
 
   <div class="right-bloc col-xs-7">
     <div class="left col-xs-6">
-      <div class="vote vote-one">{{ elm.voteOne }}</div>
+      <div class="vote vote-one">{{ elm.voteOne/elm.totalVote*100 | number:2  }}%</div>
+      <div class="bar-container cf">
+      <div class="bar" style="width:{{ elm.voteOne/elm.totalVote*100 | number:2  }}%"></div>
+      </div>
       <div class="title title-one">{{ elm.firstTitle }}</div>
       <div class="img img-one" style="background-image=url('{{ elm.fileOne }}')" ng-disabled="hasVoted(elmIndex, authData)" ng-click="hasVoted(elmIndex, authData) || vote(elm, 'one'); hasVoted(elmIndex, authData) || updateVote(elmIndex, authData.uid)">
       </div>
     </div>
     <div class="right col-xs-6">
-      <div class="vote vote-two">{{ elm.voteTwo }}</div>
+      <div class="vote vote-two">{{ elm.voteTwo/elm.totalVote*100 | number:2  }}%</div>
+      <div class="bar-container cf">
+      <div class="bar" style="width:{{ elm.voteTwo/elm.totalVote*100 | number:2  }}%"></div>
+      </div>
       <div class="title title-two">{{ elm.secondTitle }}</div>
       <div class="img img-two" style="background-image=url('{{ elm.fileTwo }}')" ng-click=" hasVoted(elmIndex, authData) || vote(elm, 'two'); hasVoted(elmIndex, authData) || updateVote(elmIndex, authData.uid)">
       </div>

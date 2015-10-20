@@ -51,6 +51,10 @@
 
     .left, .right {
       .vote{}
+      .bar {
+        height: 5px;
+        transition: all 1s ease;
+      }
       .title {
         font-size: 14px;
         font-weight: bold;
@@ -63,5 +67,30 @@
         background-color: #2682D5;
       }
     }
+    .left {
+      .vote {
+        text-align: right;
+      }
+      .bar {
+        float: right;
+        background-color: green;
+      }
+    }
+    .right {
+      .bar {
+        background-color: red;
+      }
+    }
+  }
+  // if bloc enable
+  &.enable {
+    .bar {
+      width: 0px !important;
+    }
+  }
+  &.disable {
+    .bar {
+    }
   }
 }
+

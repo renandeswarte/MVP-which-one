@@ -42,6 +42,7 @@ angular.module('myApp.wall', ['ngRoute'])
       elm.voteTwo++;
     }
   }
+  
   $scope.updateVote = function(postId, user) {
     // Update who voted fot this post
     var postVotersRef = new Firebase("https://renan-app.firebaseio.com/users/" + user + "/voters");
