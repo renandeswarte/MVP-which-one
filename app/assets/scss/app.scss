@@ -15,7 +15,7 @@ html {
   * {
     box-sizing: border-box;
   }
-  
+
   button, .btn:focus, .btn, .btn.active {
     outline: 0 !important;
   }
@@ -33,11 +33,21 @@ body {
 
 .homepage {
   color: $secondaryColor;
+  padding-bottom: 100px;
   h1 {
     font-size: 70px;
     text-align: center;
     padding: 200px 0px;
-    
+  }
+  .bloc {
+    text-align: center;
+    .icon{
+      font-size: 70px;
+      margin-bottom: 20px;
+    }
+    p{
+      font-size: 30px;
+    }
   }
 }
 

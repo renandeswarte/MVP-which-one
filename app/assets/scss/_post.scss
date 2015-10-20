@@ -29,7 +29,7 @@
       }
     }
     .time {
-      color: #CCCCCC;
+      color: #AAA;
       i {
         margin-right: 10px;
         &.fa-star {
@@ -39,12 +39,12 @@
       font-size: 12px;
     }
     .post-title {
-      margin: 5px 0px;
+      margin: 15px 0px;
       font-size: 18px;
       font-weight: bold;
     }
     .post-description {
-      font-size: 14px;
+      font-size: 16px;
       text-align: justify;
       text-transform: capitalize;
     }
@@ -85,6 +85,8 @@
         width: 100%;
         padding-bottom: 100%;
         background-color: #2682D5;
+        background-size: cover;
+            background-position: 50% 50%;
       }
     }
     .left {
