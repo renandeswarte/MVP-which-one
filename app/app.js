@@ -37,34 +37,17 @@ angular.module('myApp', [
 .controller("addMessageController", ["$scope", "$firebaseObject",  
   function($scope, $firebaseObject) {
 
+
+
     $scope.showMessages = function() {
-      // var array = [];
-      // var msgObject;
+      var array = [];
       var getMessages = new Firebase("https://renan-app.firebaseio.com/comments/");
-      // console.log($scope.authData.post);
-      // getMessages.orderByChild("postId").equalTo($scope.authData.post).on("child_added", function(snapshot) {
-      //   // console.log(snapshot.key());
-      //   console.log(snapshot.val());
-      //   array.push(snapshot.val());
-      // });
-      // var syncObject = $firebaseObject(getMessages);
-      // console.log("test ", array);
-      // // $scope.messagesArray = array;
-      // syncObject.$bindTo($scope, "messagesArray");
-      getMessages.orderByChild("postId").equalTo($scope.authData.post).on("value", function(snapshot) {
-        // console.log(snapshot.key());
-        console.log(snapshot.val());
-        // array.push(snapshot.val());
-        // msgObject = snapshot;
 
-        console.log(snapshot);
-        // $scope.messagesArray = snapshot;
-        snapshot.$bindTo($scope, "messagesArray");
+      getMessages.orderByChild("postId").equalTo($scope.authData.post).on("child_added", function(snapshot) {
+        array.push(snapshot.val());
+        $scope.$apply();
       });
-        // var syncObject = $firebaseObject(getMessages);
-
-      
-
+      $scope.messagesArray = array;
     }
 
     $scope.addComments = function() { 
@@ -89,7 +72,6 @@ angular.module('myApp', [
           console.log("comment saved!");
         }
       });
-
       $('#message').val('');
     };
 

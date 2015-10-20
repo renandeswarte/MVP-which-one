@@ -24,9 +24,18 @@
       <div class="modal-body">
 
         
-       <p ng-repeat="msg in messagesArray">
-       msg
-       </p>
+       <div class="post-message" ng-repeat="msg in messagesArray | orderBy:'-date'">
+       <div class="user-bloc">
+        <div class="pic" style="background-image:url('./dist/images/{{authData.firstname}}.jpeg')"></div>
+        <div class="info">
+          <p class="name">{{ msg.firstname }}</p>
+          <p class="time">{{ msg.date | date:'MMM d h:mm a' }}</p>
+        </div>
+       </div>
+       <div class="message-bloc">
+         <p>{{ msg.message }}</p>
+       </div>
+       </div>
        
 
       </div>
