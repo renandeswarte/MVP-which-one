@@ -1,5 +1,11 @@
 header {
   background-color: $secondaryColor;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 99;
+  box-shadow: 0px 3px 3px 3px rgba(0,0,0,0.5);
   nav{
     ul {
       margin-bottom: 0px;
@@ -10,6 +16,16 @@ header {
         display: inline-block;
         &.login-tab {
           float: right;
+        }
+        &.pic {
+          float: right;
+          margin-top: 5px;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          padding: 0;
+          background-size: cover;
+          border: 1px solid $mainColor;
         }
         &.add-post {
           float: right;
@@ -28,7 +44,7 @@ header {
         }
         a {
           color: $mainColor;
-          &:hover {
+          &:hover, &:focus {
             color: $mainColor;
             text-decoration: none;
           }
