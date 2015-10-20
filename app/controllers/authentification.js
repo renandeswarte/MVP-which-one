@@ -12,7 +12,7 @@ angular.module('myApp.authentification', [
   }
 ])
 
-.controller("authTest", ["$scope", "Auth", "$firebaseObject", "$location",  
+.controller("authTest", ["$scope", "Auth", "$firebaseObject", "$location",
   function($scope, Auth, $firebaseObject, $location) {
     $scope.auth = Auth;
 
@@ -23,6 +23,8 @@ angular.module('myApp.authentification', [
         var userInfo = $firebaseObject(ref.child('users').child(authData.uid));
 
         $scope.authData = userInfo;
+        // $scope.authData.votes = userInfo.voters;
+        console.log($scope.authData)
         // console.log("userinfo: ", $scope.authData);
         // console.dir(authData);
       }

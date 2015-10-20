@@ -17,13 +17,13 @@
     <div class="left col-xs-6">
       <div class="vote vote-one">{{ elm.voteOne }}</div>
       <div class="title title-one">{{ elm.firstTitle }}</div>
-      <div class="img img-one" style="background-image=url('{{ elm.fileOne }}')" ng-click="vote(elm, elmIndex,  'one', authData.uid)">
+      <div class="img img-one" style="background-image=url('{{ elm.fileOne }}')" ng-click="vote(elm, elmIndex,  'one', authData.uid); updateVote(elmIndex, authData.uid)">
       </div>
     </div>
     <div class="right col-xs-6">
       <div class="vote vote-two">{{ elm.voteTwo }}</div>
       <div class="title title-two">{{ elm.secondTitle }}</div>
-      <div class="img img-two" style="background-image=url('{{ elm.fileTwo }}')" ng-click="vote(elm, elmIndex,  'two', authData.uid)">
+      <div class="img img-two" style="background-image=url('{{ elm.fileTwo }}')" ng-click="vote(elm, elmIndex,  'two', authData.uid); updateVote(elmIndex, authData.uid)">
       </div>
     </div>
 

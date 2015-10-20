@@ -27,15 +27,6 @@ angular.module('myApp.wall', ['ngRoute'])
 
   $scope.vote = function(elm, postId, side, user) {
 
-    // Update who voted fot this post
-    var postVotersRef = new Firebase("https://renan-app.firebaseio.com/posts/" + postId + "/voters");
-    var postVotersArray = $firebaseArray(postVotersRef);
-    postVotersArray.set(user).then(function() {
-            console.log('voter saved!');
-          }).catch(function(error) {
-            console.log('Error!');
-    });
-
     elm.totalVote++;
     if (side === "one") {
       elm.voteOne++;
@@ -43,5 +34,22 @@ angular.module('myApp.wall', ['ngRoute'])
       elm.voteTwo++;
     }
   }
+  $scope.updateVote = function(postId, user) {
 
-}]);
+
+      // Update who voted fot this post
+      var postVotersRef = new Firebase("https://renan-app.firebaseio.com/users/" + user + "/voters");
+      var postVotersArray = $firebaseArray(postVotersRef);
+      postVotersArray.$add(postId).then(function() {
+        console.log($scope.authData.voters)
+        console.log('voter saved!');
+      }).catch(function(error) {
+        console.log('Error!');
+      });
+
+    }
+
+
+
+  
+  }]);
