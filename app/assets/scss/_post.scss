@@ -22,8 +22,8 @@
       color: $mainColor;
       position: relative;
       .user-pic {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
         border: 2px solid $mainColor;
         background-image: url('../images/default-user.jpeg');
@@ -37,7 +37,7 @@
         font-size: 25px;
         text-transform: capitalize;
         position: relative;
-        top: -10px;
+        top: -20px;
       }
     }
     .time {
