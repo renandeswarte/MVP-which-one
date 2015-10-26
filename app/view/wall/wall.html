@@ -25,7 +25,9 @@
 
        <div class="post-message cf" ng-repeat="msg in messagesArray | orderBy:'-date'">
           <div class="user-bloc col-xs-4">
-            <div class="pic" style="background-image:url('./dist/images/{{msg.firstname}}.jpeg')"></div>
+            <div class="pic">
+              <div class="user-pic" style="background-image:url('./dist/images/{{msg.firstname}}.jpeg')"></div>
+            </div>
             <div class="info">
               <p class="name">{{ msg.firstname }}</p>
               <p class="time"><i class="fa fa-clock-o"></i> {{ msg.date | date:'MMM d h:mm a' }}</p>
