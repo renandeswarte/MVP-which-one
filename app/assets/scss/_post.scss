@@ -29,6 +29,12 @@
         background-image: url('../images/default-user.jpeg');
         background-size: cover;
         display: inline-block;
+        .pic {
+            width: 100%;
+            padding-bottom: 100%;
+            border-radius: 50%;
+            background-size: cover;
+        }
       }
       .user-name {
         top: -10px;
@@ -95,12 +101,16 @@
         margin-top: 10px;
         font-weight: bold;
       }
+      .pic-container {
+        background-size: cover;
+        background-position: 50% 50%;
+        border-radius: 5px;
+      }
       .img {
         margin: 10px 0px;
         border-radius: 5px;
         width: 100%;
         padding-bottom: 100%;
-        background-color: #2682D5;
         background-size: cover;
         background-position: 50% 50%;
       }
@@ -114,11 +124,17 @@
         float: right;
         background-color: #27ae60;
       }
+      .pic-A {
+        background-image: url('../images/A-default.jpg');
+      }
     }
     .right {
       .bar {
         border-radius: 0 5px 5px 0;
         background-color: #e74c3c;
+      }
+      .pic-B {
+        background-image: url('../images/B-default.jpg');
       }
     }
   }

@@ -6,7 +6,7 @@ angular.module('myApp.authentification', [
 
 .factory("Auth", ["$firebaseAuth",
   function($firebaseAuth) {
-    var ref = new Firebase("https://renan-app.firebaseio.com");
+    var ref = new Firebase("https://which-one.firebaseio.com");
     return $firebaseAuth(ref);
   }
 ])
@@ -18,9 +18,8 @@ angular.module('myApp.authentification', [
     // any time auth status updates, add the user data to scope
     Auth.$onAuth(function(authData) {
       if (authData) {
-        var ref = new Firebase("https://renan-app.firebaseio.com/");
+        var ref = new Firebase("https://which-one.firebaseio.com/");
         var userInfo = $firebaseObject(ref.child('users').child(authData.uid));
-
         $scope.authData = userInfo;
       }
     });
@@ -45,7 +44,7 @@ angular.module('myApp.authentification', [
       }).then(function(userData) {
         $scope.message = "User created with uid: " + userData.uid;
 
-        var ref = new Firebase("https://renan-app.firebaseio.com/users/" + userData.uid);
+        var ref = new Firebase("https://which-one.firebaseio.com/users/" + userData.uid);
         var user = $firebaseObject(ref);
         
         user.firstname = $scope.firstname;

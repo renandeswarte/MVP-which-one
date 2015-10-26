@@ -10,7 +10,7 @@ angular.module('myApp.homepage', ['ngRoute'])
 }])
 
 .controller('homepage', ['$scope', '$firebaseObject', function($scope, $firebaseObject) {
-  var ref = new Firebase("https://renan-app.firebaseio.com/results");
+  var ref = new Firebase("https://which-one.firebaseio.com/results");
   var syncObject = $firebaseObject(ref);
 
   syncObject.$bindTo($scope, "data");

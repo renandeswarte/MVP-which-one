@@ -39,7 +39,7 @@ angular.module('myApp', [
 
     $scope.showMessages = function() {
       var array = [];
-      var getMessages = new Firebase("https://renan-app.firebaseio.com/comments/");
+      var getMessages = new Firebase("https://which-one.firebaseio.com/comments/");
 
       getMessages.orderByChild("postId").equalTo($scope.authData.post).on("child_added", function(snapshot) {
         array.push(snapshot.val());
@@ -49,7 +49,7 @@ angular.module('myApp', [
     }
 
     $scope.addComments = function() { 
-      var commentsRef = new Firebase("https://renan-app.firebaseio.com/comments/");
+      var commentsRef = new Firebase("https://which-one.firebaseio.com/comments/");
       var myDate = +new Date() //Give back millisecond
       
       var comment = {

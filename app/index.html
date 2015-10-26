@@ -32,7 +32,7 @@
         <li class="user-tab" ng-show="authData">
           Hello {{ authData.firstname | capitalize }} | <a href="#/" ng-click="logout()"><button class="btn btn-warning">Logout</button></a>
         </li>
-        <li class="pic" ng-show="authData" style="background-image:url('./dist/images/{{authData.firstname}}.jpeg')"></li>
+        <li class="pic" ng-show="authData"><div class="user-pic" style="background-image:url('./dist/images/{{authData.firstname}}.jpeg')"></div></li>
         <li class="add-post" ng-show="authData"><button class="btn btn-success" data-toggle="modal" data-target="#postModal">Add post</button></li>
       </ul>
     </nav>

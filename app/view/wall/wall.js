@@ -16,7 +16,7 @@ angular.module('myApp.wall', ['ngRoute'])
 
 .controller('wallCtrl', ['$scope', '$firebaseObject', '$firebaseArray', function($scope, $firebaseObject, $firebaseArray) {
 
-  var ref = new Firebase("https://renan-app.firebaseio.com/posts");
+  var ref = new Firebase("https://which-one.firebaseio.com/posts");
   var syncObject = $firebaseObject(ref);
   syncObject.$bindTo($scope, "data");
 
@@ -41,7 +41,7 @@ angular.module('myApp.wall', ['ngRoute'])
 
   $scope.updateVote = function(postId, user) {
     // Update who voted fot this post
-    var postVotersRef = new Firebase("https://renan-app.firebaseio.com/users/" + user + "/voters");
+    var postVotersRef = new Firebase("https://which-one.firebaseio.com/users/" + user + "/voters");
     var postVotersArray = $firebaseArray(postVotersRef);
     postVotersArray.$add(postId).then(function() {
       console.log('voter saved!');

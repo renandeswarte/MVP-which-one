@@ -2,7 +2,9 @@
 <button class="comments-links" data-toggle="modal" data-target="#commentsModal" ng-click="authData.post=elmIndex; showMessages()"><i class="fa fa-comments"></i></button>
   <div  class="left-bloc  col-xs-5">
     <div class="top-left-bloc">
-      <div class="user-pic" style="background-image:url('./dist/images/{{elm.firstname}}.jpeg')"></div>
+      <div class="user-pic">
+        <div class="pic" style="background-image:url('./dist/images/{{elm.firstname}}.jpeg')"></div>
+      </div>
       <div class="user-name">{{elm.firstname}}</div>
     </div>
     <div class="time total"><i class="fa fa-clock-o"></i>{{ elm.date | date:'MMM d h:mm a' }} <span class="vote"><i class="fa fa-star"></i>{{ elm.totalVote }}</span></div>
@@ -25,7 +27,9 @@
         <div class="bar" style="width:{{ elm.voteOne/elm.totalVote*100 | number:2  }}%"></div>
       </div>
       <div class="title title-one">{{ elm.firstTitle }}</div>
-      <div class="img img-one" style="background-image:url('./dist/images/{{elm.fileOne}}')" ng-disabled="hasVoted(elmIndex, authData)" ng-click="hasVoted(elmIndex, authData) || vote(elm, 'one'); hasVoted(elmIndex, authData) || updateVote(elmIndex, authData.uid)">
+      <div class="pic-container pic-A">
+        <div class="img img-one" style="background-image:url('./dist/images/{{elm.fileOne}}')" ng-disabled="hasVoted(elmIndex, authData)" ng-click="hasVoted(elmIndex, authData) || vote(elm, 'one'); hasVoted(elmIndex, authData) || updateVote(elmIndex, authData.uid)">
+        </div>
       </div>
     </div>
 
@@ -37,7 +41,9 @@
         <div class="bar" style="width:{{ elm.voteTwo/elm.totalVote*100 | number:2  }}%"></div>
       </div>
       <div class="title title-two">{{ elm.secondTitle }}</div>
-      <div class="img img-two" style="background-image:url('./dist/images/{{elm.fileTwo}}')" ng-click=" hasVoted(elmIndex, authData) || vote(elm, 'two'); hasVoted(elmIndex, authData) || updateVote(elmIndex, authData.uid)">
+      <div class="pic-container pic-B">
+        <div class="img img-two" style="background-image:url('./dist/images/{{elm.fileTwo}}')" ng-click=" hasVoted(elmIndex, authData) || vote(elm, 'two'); hasVoted(elmIndex, authData) || updateVote(elmIndex, authData.uid)">
+        </div>
       </div>
     </div>
 

@@ -10,7 +10,7 @@ angular.module('myApp.addPost', [
       var fileOneInput = $('#post-first-file').val();
       var fileTwoInput = $('#post-second-file').val();
 
-      var ref = new Firebase("https://renan-app.firebaseio.com/posts/");
+      var ref = new Firebase("https://which-one.firebaseio.com/posts/");
       var myDate = +new Date() //Give back millisecond
       
       var post = {
