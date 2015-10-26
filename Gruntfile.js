@@ -102,7 +102,7 @@ module.exports = function(grunt) {
 
     shell: {
       view: {
-        command: 'open http://localhost:8000/app',
+        command: 'open http://localhost:8080/app',
         options: {
             execOptions: {
                 maxBuffer: 500 * 1024 // or Infinity
@@ -110,7 +110,7 @@ module.exports = function(grunt) {
         }
       },
       server:{
-        command: 'npm start'
+        command: 'nodemon server/server.js'
       }
     }
 
@@ -155,7 +155,6 @@ grunt.loadNpmTasks("grunt-bower-install-simple");
 
   // Create and check file
   grunt.registerTask('build', [
-    'jshint',
     'concat',
     'uglify',
     'sass'
