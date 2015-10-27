@@ -102,7 +102,7 @@ module.exports = function(grunt) {
 
     shell: {
       view: {
-        command: 'open http://localhost:8080/app',
+        command: 'open http://localhost:8080/',
         options: {
             execOptions: {
                 maxBuffer: 500 * 1024 // or Infinity
@@ -172,9 +172,10 @@ grunt.loadNpmTasks("grunt-bower-install-simple");
   });
 
   // Start local server
-  grunt.registerTask('server', function () {
-    grunt.task.run([ 'shell:server' ]);
-  });
+  grunt.registerTask('launch', [
+    'build',
+    'shell'
+  ]);
 
   // grunt.registerTask('upload', function(n) {
   //   if(grunt.option('prod')) {

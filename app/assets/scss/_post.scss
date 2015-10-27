@@ -8,6 +8,8 @@
   border-radius: 3px;
   -webkit-animation: show 1s; /* Safari 4+ */
   animation: show 1s; /* IE 10+, Fx 29+ */
+  margin-right: 0px;
+  margin-left: 0px;
   @-webkit-keyframes show {
     0%   { opacity: 0; }
     100% { opacity: 1; }

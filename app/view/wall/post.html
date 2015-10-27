@@ -1,6 +1,6 @@
 <div class="post-container row"  ng-class="hasVoted(elmIndex, authData) ? 'disable' : 'enable'">
 <button class="comments-links" data-toggle="modal" data-target="#commentsModal" ng-click="authData.post=elmIndex; showMessages()"><i class="fa fa-comments"></i></button>
-  <div  class="left-bloc  col-xs-5">
+  <div  class="left-bloc  col-xs-12 col-sm-5">
     <div class="top-left-bloc">
       <div class="user-pic">
         <div class="pic" style="background-image:url('./dist/images/{{elm.firstname}}.jpeg')"></div>
@@ -16,10 +16,10 @@
     </div>
   </div>
 
-  <div class="right-bloc col-xs-7">
+  <div class="right-bloc col-xs-12 col-sm-7">
     <p class="vote-info">Click on picture to vote</p>
 
-    <div class="left col-xs-6">
+    <div class="left col-xs-12 col-sm-6">
       <div class="vote vote-one">
         {{ elm.voteOne/elm.totalVote*100 | number:0  }}%
       </div>
@@ -33,7 +33,7 @@
       </div>
     </div>
 
-    <div class="right col-xs-6">
+    <div class="right col-xs-12 col-sm-6">
       <div class="vote vote-two">
         {{ elm.voteTwo/elm.totalVote*100 | number:0  }}%
       </div>

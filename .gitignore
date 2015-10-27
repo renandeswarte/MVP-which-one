@@ -20,8 +20,9 @@ coverage
 
 # Compiled Dirs (http://nodejs.org/api/addons.html)
 build/
-dist/css/
-dist/js/
+
+app/dist/css/
+app/dist/js/
 
 
 # Dependency directorys

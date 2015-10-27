@@ -86,6 +86,16 @@ input[readonly] {
   min-height: 500px;
 }
 
+.new-post-bottom {
+  text-align: center;
+  padding: 20px 0px;
+  button {
+    color: $secondaryColor;
+    background-color: $extraColor;
+    border-color: $extraColor;
+  }
+}
+
 // ClearFix
 .cf:before,
 .cf:after {
@@ -124,25 +134,5 @@ input[readonly] {
   margin-right: auto;
   opacity: 1;
 }
-#commentsModal {
-  .modal-header {
-    .form-group{
-      width: 80%;
-      input {
-        width: 100%;
-      }
-    }
-    button {
-      float: right;
-      width: 18%;
-      &.close {
-        text-align: right;
-      }
-    }
-  }
-  .modal-body {
-    max-height: 390px;
-    overflow: scroll;
-  }
-}
+
 

@@ -27,7 +27,6 @@
       <li  class="logo special-font"><a href="#/">Which One?</a></li>
         <li><a href="#/">Home</a></li>
         <li ng-show="authData"><a href="#/wall">Wall</a></li>
-        <li ng-show="authData"><a href="#/view2">Friends</a></li>
         <li class="login-tab" ng-hide="authData"><a href="#/login">Login | Signup</a></li>
         <li class="user-tab" ng-show="authData">
           Hello {{ authData.firstname | capitalize }} | <a href="#/" ng-click="logout()"><button class="btn btn-warning">Logout</button></a>

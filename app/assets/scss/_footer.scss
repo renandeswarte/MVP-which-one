@@ -3,11 +3,13 @@ footer {
   background-color: #EEEEEE;
   .app-version{
     display: inline-block;
+    font-size: 10px;
   }
   .footer-links {
      float: right;
     ul {
       margin-bottom: 0px;
+      padding-left: 0px;
       li {
         display: inline-block;
        padding: 0 5px;

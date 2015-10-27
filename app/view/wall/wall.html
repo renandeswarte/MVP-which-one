@@ -2,6 +2,9 @@
 <div ng-repeat="(elmIndex, elm) in data | orderBy:'-date'">
   <post-element index-element={{$index}}></post-element>
 </div>
+<div class="new-post-bottom">
+  <button class="btn btn-primary" data-toggle="modal" data-target="#postModal">Add post</button>
+</div>
 
 <!-- Comments Modal -->
 <div class="modal fade fade2" id="commentsModal"  ng-init="" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -12,16 +15,16 @@
         <h4 class="modal-title" id="myModalLabel">Comments Activity</h4>
       </div>
 
-      <div class="modal-header">
-        <form class="form-inline" ng-submit="(addComments())">
-          <div class="form-group">
+      <div class="modal-header row">
+        <form class="form-inline col-xs-12" ng-submit="(addComments())">
+          <div class="form-group col-xs-9">
             <input type="text" class="form-control" id="message" placeholder="Your message" ng-model="authData.userMessage">
           </div>
-          <button type="submit" class="btn btn-primary">Send</button>
+          <button type="submit" class="btn btn-primary col-xs-3">Send</button>
         </form>
       </div>
 
-      <div class="modal-body">
+      <div class="modal-body row ">
 
        <div class="post-message cf" ng-repeat="msg in messagesArray | orderBy:'-date'">
           <div class="user-bloc col-xs-4">
