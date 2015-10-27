@@ -1,5 +1,5 @@
 <!-- Generate and render every post -->
-<div ng-repeat="(elmIndex, elm) in data | orderBy:'-date'">
+<div class="post-block" ng-repeat="(elmIndex, elm) in data | orderBy:'-date'">
   <post-element index-element={{$index}}></post-element>
 </div>
 <div class="new-post-bottom">

@@ -18,3 +18,13 @@ $(document).ready( function() {
         
     });
 });
+
+$(document).ready( function() {
+    var height = $(window).height();
+    console.log(height);
+    var heightFix = height - 80;
+    if (height > 500) {
+      $('.main-container').css("min-height", heightFix + "px" );
+    }
+});
+
